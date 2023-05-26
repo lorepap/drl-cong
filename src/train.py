@@ -60,7 +60,7 @@ def train(args):
             model_ts = time_to_str()
             start = datetime.now()
             model.learn(total_timesteps=params["n_steps"])
-            if not params.debug:
+            if not(params["debug"]):
                 model.save(os.path.join(entry_dir, "log", "ppo", "model", f"{model_name}.{model_ts}"))
                 # Save the training parameters to a JSON file
                 filename = os.path.join(config_dir, f"{model_name}.json")
@@ -99,7 +99,7 @@ def train(args):
             start = datetime.now()
             try:
                 model.learn(total_timesteps=params["n_steps"])
-                if not(params.debug):
+                if not(params["debug"]):
                     model.save(model_path) # overwrite the model with the new one
                     models = config.get("models", [])
                     for model in models:
