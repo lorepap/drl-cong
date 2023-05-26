@@ -9,7 +9,7 @@ from iperf.iperf_server import IperfServer
 from helper import context, utils
 from helper.mahimahi_trace import MahimahiTrace
 from network.netlink_communicator import NetlinkCommunicator
-from time import time
+from datetime import datetime
 
 # Base class for Trainer
 class Starter():
@@ -29,7 +29,11 @@ class Starter():
         self.trace = trace
         self.ip = ip
         self.iperf_time = iperf_time
+        self.timestamp = utils.time_to_str() # Timestamp for iperf trace
 
+    def get_timestamp(self):
+        return self.timestamp
+    
     def is_kernel_initialized(self) -> bool:
         cmd = ['cat', '/proc/sys/net/ipv4/tcp_congestion_control']
 
@@ -67,16 +71,16 @@ class Starter():
         self.server.start()
 
     # Initialize an IperfClient object for the experiment with an input mahimahi trace (from args)
-    def start_client(self, tag: str, pid_file: str = None) -> str:
+    def start_client(self, tag: str) -> str:
 
         if self.moderator.use_iperf != 1:
             self.moderator.start()
             return
 
-        base_path = os.path.join(context.entry_dir, self.iperf_dir)
+        base_path = os.path.join(context.entry_dir, self.iperf_dir, self.trace)
         utils.check_dir(base_path)
 
-        filename = f'{tag}.{utils.time_to_str()}.json'
+        filename = f'{tag}.{self.timestamp}.json'
         
         if is_debug_on():
             filename = change_name(filename)
@@ -120,7 +124,7 @@ class Starter():
         print(
             f'\n\n----- Number of protocols available is {self.nchoices} ----- \n\n')
 
-    def close_communication(self) -> None:
+    def close_kernel_channel(self) -> None:
 
         msg = self.netlink_communicator.create_netlink_msg(
             'END_COMMUNICATION', msg_flags=self.netlink_communicator.END_COMM_FLAG)

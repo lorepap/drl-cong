@@ -6,3 +6,9 @@ __pycache__/
 venv
 *.pth
 .env
+*.ko
+*.o
+*.mod.o
+Module.symvers
+*.mod
+*.cmd

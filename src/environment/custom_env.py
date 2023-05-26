@@ -242,6 +242,7 @@ class CCEnv(BaseEnvironment):
         self.curr_state = state_n
 
         # Padding
+        print("[INFO] Data Size:", state_n.shape[0])
         if state_n.shape[0] > self.height_state:
             state_n = state_n[-self.height_state:, :]
         else:
@@ -268,7 +269,6 @@ class CCEnv(BaseEnvironment):
         self._change_cca(int(action))
         observation, observed_action, rewards, binary_rewards = self._get_state()
         # binary_rewards, rewards = self._get_reward()
-
         done = False if self.step_counter != self.steps_per_episode-1 else True
         self.step_counter = (self.step_counter+1) % self.steps_per_episode
 
@@ -279,7 +279,7 @@ class CCEnv(BaseEnvironment):
         data = {'rewards': binary_rewards, 'normalized_rewards': rewards, "features": self.features, 'obs': observation}
 
         print(
-            f'\nStep: {self.step_counter} \t Sent Action: {action} \t Received Action: {observed_action} \t Epoch: {self.epoch} | Reward: {avg_reward} ({np.mean(avg_binary_reward)})  | Data Size: {observation.shape[0]}')
+            f'\nStep: {self.step_counter} \t Sent Action: {action} \t Received Action: {observed_action} \t Epoch: {self.epoch} | Reward: {avg_reward} ({np.mean(avg_binary_reward)})')
 
         counter = self.step_counter if self.step_counter != 0 else self.steps_per_episode
 

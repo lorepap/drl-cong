@@ -1,7 +1,7 @@
-n_steps: 2
-n_epochs: 1
+n_steps: 500
+n_epochs: 20
 num_features: 8
-window_len: 150
+window_len: 50
 jiffies_per_state: 5
 num_fields_kernel: 11
 knowledge_percentage: 50
