@@ -1,0 +1,44 @@
+# mahimahi mm-link (Uplink) [/home/lorenzo/Desktop/PPO-for-Beginners/src/traces/TMobile-LTE-driving.up] > /home/lorenzo/Desktop/PPO-for-Beginners/log/mahimahi/MahimahiTrace.tm_lte_driving.2023.05.25.20.03.30.up.log
+# command line: 'mm-link' '/home/lorenzo/Desktop/PPO-for-Beginners/src/traces/TMobile-LTE-driving.up' '/home/lorenzo/Desktop/PPO-for-Beginners/src/traces/TMobile-LTE-driving.down' '--uplink-log=/home/lorenzo/Desktop/PPO-for-Beginners/log/mahimahi/MahimahiTrace.tm_lte_driving.2023.05.25.20.03.30.up.log' '--downlink-log=/home/lorenzo/Desktop/PPO-for-Beginners/log/mahimahi/MahimahiTrace.tm_lte_driving.2023.05.25.20.03.30.down.log' 'python3' '/home/lorenzo/Desktop/PPO-for-Beginners/src/iperf.py' '192.168.64.16' '86400' '/home/lorenzo/Desktop/PPO-for-Beginners/log/ppo/iperf/tm.lte.driving.2023.05.25.20.03.26.json' '/home/lorenzo/Desktop/PPO-for-Beginners/src/pid.txt'
+# queue: infinite
+# init timestamp: 1685037810963
+# base timestamp: 199
+296 + 80
+296 + 52
+296 + 80
+296 + 80
+296 + 80
+296 + 64
+1133 # 1504
+1133 - 80 837
+1133 - 52 837
+1133 - 80 837
+1133 - 80 837
+1133 - 80 837
+1133 - 64 837
+1141 + 56
+1141 + 93
+1173 # 1504
+1173 - 56 32
+1173 - 93 32
+1173 # 1504
+1173 # 1504
+1173 # 1504
+1174 # 1504
+1174 # 1504
+1174 # 1504
+1174 # 1504
+1174 # 1504
+1174 # 1504
+1174 # 1504
+1175 # 1504
+1175 # 1504
+1175 # 1504
+1175 # 1504
+1177 # 1504
+1177 # 1504
+1177 # 1504
+1177 # 1504
+1178 # 1504
+1178 # 1504
+1179 + 56

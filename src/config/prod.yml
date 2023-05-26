@@ -1,0 +1,12 @@
+train_episodes: 20
+test_episodes: 1
+num_features: 8
+window_len: 5
+jiffies_per_state: 5
+num_fields_kernel: 10
+steps_per_episode: 1000
+knowledge_percentage: 50
+delta: 0.5
+lr: 0.001
+step_wait_seconds: 1
+log_range_steps: 500

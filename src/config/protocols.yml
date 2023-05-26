@@ -1,0 +1,9 @@
+protocols:
+  cubic:
+    name: 'cubic'
+  vegas:
+    name: 'vegas'
+  hybla:
+    name: 'hybla'
+  owl:
+    name: 'owl'

@@ -1,0 +1,26 @@
+models:
+  adaptive_greedy_threshold:
+    name: 'adaptive_greedy_threshold'  
+  adaptive_greedy_percentile:
+    name: 'adaptive_greedy_percentile'
+  adaptive_greedy_weighted:
+    name: 'adaptive_greedy_weighted'
+  bootstrapped_ts:
+    name: 'bootstrapped_ts'
+  bootstrapped_ucb:
+    name: 'bootstrapped_ucb'
+  epsilon_greedy_decay:
+    name: 'epsilon_greedy_decay'
+  epsilon_greedy:
+    name: 'epsilon_greedy'
+  explore_first:
+    name: 'explore_first'
+  active_explorer:
+    name: 'active_explorer'
+  separate_classifiers:
+    name: 'separate_classifiers'
+  softmax_explorer:
+    name: 'softmax_explorer'
+  random_policy:
+    name: 'random_policy'
+  

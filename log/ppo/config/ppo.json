@@ -1,0 +1,30 @@
+{
+    "models": [
+        {
+            "model_name": "ppo.2023.05.26.06.47.32",
+            "runs": [
+                {
+                    "trace": "att.lte.driving.2016",
+                    "training_time": "0:00:05.971189"
+                },
+                {
+                    "trace": "att.lte.driving.2016",
+                    "training_time": "0:00:16.316342"
+                }
+            ],
+            "timestamp": "2023.05.26.06.47.32",
+            "training_params": {
+                "debug": false,
+                "jiffies_per_state": 5,
+                "knowledge_percentage": 50,
+                "n_epochs": 1,
+                "n_steps": 2,
+                "num_features": 8,
+                "num_fields_kernel": 11,
+                "step_wait_seconds": 0.5,
+                "window_len": 150
+            }
+        }
+    ],
+    "tests": []
+}
