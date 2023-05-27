@@ -14,14 +14,16 @@ TRAINING_FILENAME = os.path.join(context.src_dir, "train.py")
 # TESTING_FILENAME = os.path.join(context.ml_dir, "test.py")
 
 def run_experiments():
-    traces = ["att.lte.driving.2016", "tm.lte.driving", "vz.lte.driving"]
+    traces = ["tm.lte.driving", "vz.lte.driving"]
     for i, trace in enumerate(traces):
         print(f"Training PPO on {trace}")
 
-        if i > 0: # the same model will be retrained on multiple input traces
-            retrain = 1
-        else:
-            retrain = 0
+        # if i > 0: # the same model will be retrained on multiple input traces
+        #     retrain = 1
+        # else:
+        #     retrain = 0
+
+        retrain = 1
 
         # generate command to execute for this trace        
         command = f"python3 {TRAINING_FILENAME} --trace {trace} --retrain {retrain}"

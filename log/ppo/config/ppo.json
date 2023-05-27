@@ -1,4 +1,79 @@
 {
-    "models": [],
+    "models": [
+        {
+            "model_name": "ppo.2023.05.26.03.01.47",
+            "runs": [
+                {
+                    "timestamp": "2023.05.26.03.01.47",
+                    "trace": "att.lte.driving.2016",
+                    "training_time": "0:05:12.832093"
+                },
+                {
+                    "timestamp": "2023.05.26.03.07.01",
+                    "trace": "tm.lte.driving",
+                    "training_time": "0:04:39.437666"
+                },
+                {
+                    "timestamp": "2023.05.26.03.11.41",
+                    "trace": "vz.lte.driving",
+                    "training_time": "0:04:31.149531"
+                }
+            ],
+            "timestamp": "2023.05.26.03.01.47",
+            "training_params": {
+                "debug": false,
+                "jiffies_per_state": 5,
+                "knowledge_percentage": 50,
+                "n_epochs": 20,
+                "n_steps": 500,
+                "num_features": 8,
+                "num_fields_kernel": 11,
+                "step_wait_seconds": 0.5,
+                "window_len": 50
+            }
+        },
+        {
+            "model_name": "ppo.2023.05.26.09.35.11",
+            "runs": [
+                {
+                    "timestamp": "2023.05.26.09.35.11",
+                    "trace": "att.lte.driving.2016",
+                    "training_time": "2:49:04.822718"
+                },
+                {
+                    "trace": "tm.lte.driving",
+                    "timestamp": "2023.05.26.12.24.17",
+                    "training_time": "0:04:39.529006"
+                },
+                {
+                    "trace": "vz.lte.driving",
+                    "timestamp": "2023.05.26.12.28.58",
+                    "training_time": "0:04:33.326474"
+                },
+                {
+                    "trace": "tm.lte.driving",
+                    "timestamp": "2023.05.26.14.28.20",
+                    "training_time": "1:32:10.917953"
+                },
+                {
+                    "trace": "vz.lte.driving",
+                    "timestamp": "2023.05.26.16.00.32",
+                    "training_time": "1:33:33.566456"
+                }
+            ],
+            "timestamp": "2023.05.26.09.35.11",
+            "training_params": {
+                "debug": false,
+                "jiffies_per_state": 5,
+                "knowledge_percentage": 50,
+                "n_epochs": 20,
+                "n_steps": 500,
+                "num_features": 8,
+                "num_fields_kernel": 11,
+                "step_wait_seconds": 0.5,
+                "window_len": 50
+            }
+        }
+    ],
     "tests": []
 }

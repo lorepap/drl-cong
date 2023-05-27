@@ -114,9 +114,9 @@ def get_private_ip():
     output = subprocess.check_output(['ifconfig']).decode('utf-8')
     
     # Search the output for the private IP address using a regular expression
-    pattern = r'inet (192(?:\.\d{1,3}){2}\.\d{1,3})'
+    pattern = r'inet (?:addr:)?(10(?:\.\d{1,3}){3})'
     match = re.search(pattern, output)
-
+    
     if match:
         # If a match is found, return the IP address
         ip_address = match.group(1)
