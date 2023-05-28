@@ -121,7 +121,7 @@ class CCEnv(BaseEnvironment):
             [cwnd, rtt, rtt_dev, delivered, delivered_diff, loss_rate, in_flight, retrans, thr, rtt_min])
         
         self.features.append(curr_kernel_features)
-        
+
         # Number of total features which will be extracted during the step_wait time (switching time) 
         num_features_tmp = self.num_features_tmp
 
@@ -275,7 +275,7 @@ class CCEnv(BaseEnvironment):
         avg_reward = round(np.mean(rewards), 4)
         avg_binary_reward = np.bincount(binary_rewards).argmax()
 
-        info = {'reward': avg_reward}
+        info = {'reward': avg_reward, 'obs': self.features}
         data = {'rewards': binary_rewards, 'normalized_rewards': rewards, "features": self.features, 'obs': observation}
 
         print(

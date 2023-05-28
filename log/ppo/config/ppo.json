@@ -72,8 +72,29 @@
                 "num_fields_kernel": 11,
                 "step_wait_seconds": 0.5,
                 "window_len": 50
-            }
+            },
+            "tests": [
+                {
+                    "trace": "att.lte.driving.2016",
+                    "timestamp": "2023.05.28.00.21.37",
+                    "test_time": "0:00:01.941552"
+                },
+                {
+                    "trace": "att.lte.driving.2016",
+                    "timestamp": "2023.05.28.00.45.20",
+                    "test_time": "0:01:08.558337"
+                },
+                {
+                    "trace": "tm.lte.driving",
+                    "timestamp": "2023.05.28.00.47.00",
+                    "test_time": "0:01:03.891520"
+                },
+                {
+                    "trace": "vz.lte.driving",
+                    "timestamp": "2023.05.28.00.48.16",
+                    "test_time": "0:01:16.460104"
+                }
+            ]
         }
-    ],
-    "tests": []
+    ]
 }

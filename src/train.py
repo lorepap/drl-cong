@@ -29,8 +29,7 @@ def create_config(model_name):
     filename = os.path.join(entry_dir, "log", model_name, f"{model_name}.json")
     if not os.path.isfile(filename):
         data = {
-            "models": [],
-            "tests": []
+            "models": []
         }
         with open(os.path.join(entry_dir, filename), "w") as file:
             json.dump(data, file, indent=4)
@@ -112,7 +111,7 @@ def train(args):
                             }
                             model["runs"].append(info)
                             break
-                    with open(filename, "w") as file:
+                    with open(filename, "w+") as file:
                         json.dump(config, file, indent=4)
             except Exception as e:
                 print(f"An error occurred during training: {str(e)}")
@@ -123,7 +122,6 @@ def train(args):
     starter.stop_communication()
     starter.close_kernel_channel()
             
-            
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("--retrain", type=int, default=0)
@@ -131,12 +129,3 @@ if __name__ == "__main__":
     args = parser.parse_args()
     train(args)
     os._exit(0)
-
-# FOR TESTING
-# obs = env.reset()
-# for i in range(1000):
-#     action, _state = model.predict(obs, deterministic=True)
-#     obs, reward, done, info = env.step(action)
-#     env.render()
-#     if done:
-#       obs = env.reset()

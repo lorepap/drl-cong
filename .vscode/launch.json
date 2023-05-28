@@ -8,11 +8,25 @@
             "name": "drl-test",
             "type": "python",
             "request": "launch",
-            "program": "drl-test.py",
+            "program": "/home/lorenzo/Desktop/drl-cong/src/test.py",
             "console": "integratedTerminal",
             "justMyCode": false,
             "args": [
-                "--retrain", "1"
+                "--trace", "vz.lte.driving",
+                "--model_name", "ppo.2023.05.26.09.35.11",
+                "--test_time", "60"
+            ]
+        },
+        {
+            "name": "drl-train",
+            "type": "python",
+            "request": "launch",
+            "program": "src/train.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--retrain",
+                "1"
             ]
         }
     ]

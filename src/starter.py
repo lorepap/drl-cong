@@ -73,9 +73,7 @@ class Starter():
     # Initialize an IperfClient object for the experiment with an input mahimahi trace (from args)
     def start_client(self, tag: str) -> str:
 
-        if self.moderator.use_iperf != 1:
-            self.moderator.start()
-            return
+        # self.moderator.start()
 
         base_path = os.path.join(context.entry_dir, self.iperf_dir, self.trace)
         utils.check_dir(base_path)
